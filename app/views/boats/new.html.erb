@@ -1,0 +1,7 @@
+<h1>Enter Your Boat Details</h1>
+<%= simple_form_for @boat do |f| %>
+	<%= f.input :name %>
+	<%= f.input :kind %>
+	<%= f.submit 'Add' %>
+<% end %>
+<%= link_to 'Back', root_path %>
