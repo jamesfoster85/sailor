@@ -1,3 +1,10 @@
-<h1>'<%= @boat.name %>'</h1>
-<h2><%= @boat.kind %></h2>
+<h1>Latest Boats</h1>
+<% @boats.reverse_each do |boat| %>
+	<div>
+		<h2>'<%= boat.name %>'</h2>
+		<h3><%= boat.kind %></h3>
+	</div>
+	<hr />
+<% end %>
+
 <%= link_to 'Add a Boat', new_boat_path %>
